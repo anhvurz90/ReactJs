@@ -11,7 +11,11 @@ class App extends React.Component {
 		return (
 			<div>
 				<h1 style={myStyle}>Header</h1>
+				{
+					//One line comment... 
+				}
 				<h2>Content</h2>
+				{ /*Multi line comment...*/ }
 				<p data-myattribute = "some value">This is the content!!!</p>
 				Hello World!!!
 				<p>{i == 1 ? 'One': 'not one'}</p>
