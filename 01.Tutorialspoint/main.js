@@ -6,6 +6,7 @@ import App2 from './App2.jsx';
 import App3 from './App3.jsx';
 import App4 from './App4.jsx';
 import App42 from './App4.2.jsx';
+import App43 from './App4.3.jsx';
 
 //ReactDOM.render(<App/>, document.getElementById("app"));
 //ReactDOM.render(<App1/>, document.getElementById("app"));
@@ -15,4 +16,5 @@ import App42 from './App4.2.jsx';
 //					contentProp="Content from props..."/>,
 //				document.getElementById('app'));
 				
-ReactDOM.render(<App42/>, document.getElementById('app'));
+//ReactDOM.render(<App42/>, document.getElementById('app'));
+ReactDOM.render(<App43/>, document.getElementById('app'));
