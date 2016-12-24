@@ -317,6 +317,7 @@
 					</div>
 				}
 			}
+			export default App;
 		}
 		main.js: {
 			import React from 'react';
@@ -326,7 +327,6 @@
 			ReactDOM.render(<App 	headerProp="Header from props..."
 								contentProp="Content from props..."/>,
 						document.getElementById('app'));
-			export default App;
 		}
 	}
 	7.2.Default Props: {
