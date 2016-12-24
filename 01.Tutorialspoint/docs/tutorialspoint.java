@@ -302,7 +302,115 @@
 		export default App;
 	}
 }
-7.
+7.ReactJs - Props Overview {
+	- Diff from state: Props are immutable.
+		+ Container component should define state that can be updated and changed.
+		+ Child components should only pass data from the state using props.
+	7.1 {
+		App.jsx: {
+			import React from 'react';
+			class App extends React.Component {
+				render() {
+					<div>
+						<h1>{this.props.headerProp}</h1>
+						<h2>{this.props.contentProp}</h2>
+					</div>
+				}
+			}
+		}
+		main.js: {
+			import React from 'react';
+			import ReactDOM from 'react-dom';
+			import App from './App.jsx';
+			
+			ReactDOM.render(<App 	headerProp="Header from props..."
+								contentProp="Content from props..."/>,
+						document.getElementById('app'));
+			export default App;
+		}
+	}
+	7.2.Default Props: {
+		App.jsx: {
+			import React from 'react';
+			class App extends React.Component {
+				render() {
+					return (
+						<div>
+							<h1>{this.props.headerProp}</h1>
+							<h2>{this.props.contentProp}</h2>
+						</div>
+					);
+				}
+			}
+			App.defaultProps = {
+				headerProp: "Header from props...",
+				contentProp: "Content from props..."
+			}
+			
+			export default App;
+		}
+		main.js: {
+			import React from 'react';
+			import ReactDOM from 'react-dom';
+			import App from './App.jsx';
+			
+			ReactDOM.render(<App/>, document.getElementById('app'));
+		}
+	}
+	7.3.State and Props: {
+		App.jsx: {
+			import React from 'react';
+			
+			class App extends React.Component {
+				constructor(props) {
+					super(props);
+					this.sate = {
+						header:  "Header from ...",
+						content: "Content from..."
+					}
+				}
+				
+				render() {
+					return (
+						<div>
+							<Header headerProp={this.state.header}/>
+							<Content contentProp={this.state.content}/>
+						</div>
+					);
+				}
+			}
+			
+			class Header extends React.Component {
+				render() {
+					return (
+						<div>
+							<h1>{this.props.headerProp}</h1>
+						</div>
+					);
+				}
+			}
+			
+			class Content extends React.Component {
+				render() {
+					return (
+						<div>
+							<h2>{this.props.contentProp}</h2>
+						</div>
+					);
+				}
+			}			
+			export default App;
+		}
+		
+		main.js: {
+			import React from 'react';
+			import ReactDom from 'react-dom';
+			import App from './App.jsx';
+			
+			ReactDOM.render(<App/>, document.getElementById("app"));
+		}
+	}
+}
 
 
 
