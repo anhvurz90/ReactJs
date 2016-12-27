@@ -428,9 +428,9 @@
 						<h3>Func: {this.props.propFunc(3)}</h3>
 						<h3>Number: {this.props.propNumber}</h3>
 						<h3>String: {this.props.propString}</h3>
-						<h3>Object: {this.props.propObject.objectName1</h3>
-						<h3>Object: {this.props.propObject.objectName2</h3>
-						<h3>Object: {this.props.propObject.objectName3</h3>
+						<h3>Object: {this.props.propObject.objectName1}</h3>
+						<h3>Object: {this.props.propObject.objectName2}</h3>
+						<h3>Object: {this.props.propObject.objectName3}</h3>
 					</div>
 				);
 			}
@@ -470,6 +470,45 @@
 		ReactDOM.render(<App/>, document.getElementById("app"));
 	}
 }
+9.ReactJs - Component API {
+	setState(), forceUpdate(), ReactDOM.findDOMNode()
+	this.method.bind(this);
+	
+	Set State: {
+		import React from 'react';
+		class App extends React.Component {
+			constructor() {
+				super();
+				
+				this.state = {
+					data: []
+				};
+				
+				this.setStateHandler = this.setStateHandler.bind(this);
+			};
+			
+			setStateHandler() {
+				var item = "setState...";
+				var myArray = this.state.data;
+				myArray.push(item);
+				this.setState({data: myArray});
+			};
+			
+			render() {
+				return (
+					<div>
+						<button onClick={this.setStateHandler}SET STATE</button>
+						<h4>State Array: {this.state.data}</h4>
+					</div>
+				);
+			}
+		}
+		
+		export default App;
+	}
+}
+10.
+
 
 
 
