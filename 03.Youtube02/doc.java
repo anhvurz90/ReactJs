@@ -42,3 +42,44 @@ https://www.youtube.com/watch?v=yZ0f1Apb5CU&list=PL4cUxeGkcC9i0_2FF-WhtRIfIJ1lXl
 		+ routing
 	}
 }
+015.Course Files: {
+	- https://github.com/iamshaunjp/react-playlist
+	- install git
+	- open Atom
+	- checkout code: git checkout lesson-1
+}
+02.Setup with Webpack (& without) {
+	- JSX/ ES6/ BABEL {
+		+ We write React apps in     -------------------> Browsers understand....
+			JSX/ ES6					BABEL			- Vanilla JS
+	}
+	- 2 Ways to setup React & Babel: {
+		+ Quick way: {
+			* Add React and Babel scripts to head of HTML
+			* Use <script type="text/babel" src="index.js">
+		}
+		+ Not so quick (but better) way: {
+			* Use npm to install React and Babel
+			* Use webpack to configure Babel
+			* Can also use the webpack-dev-server
+		}
+	}
+	- npm init -> package.json
+	- npm install react react-dom -save
+	- npm install babel-core babel-loader babel-preset-es-2015 babel-preset-react -save-dev
+	- npm install webpack webpack-dev-server --save-dev
+	- touch 'webpack.config.js' <- github.com/iamshaunjp/react-playlist/blob/master/webpack.config.js
+	- create file: '/src/app/index.js': {
+		alert("It woooooorks");
+	}
+	- 'package.json': {
+		"start": "npm run build",
+		"build": "webpack -d && webpack-dev-server --content-base src/ --inline --hot --port 1234"
+	}
+	- index.html: {
+		<body>
+			<script src="/app/bundle.js"></script>
+		</body>
+	}
+	- npm start
+}
