@@ -113,3 +113,15 @@ https://www.youtube.com/watch?v=yZ0f1Apb5CU&list=PL4cUxeGkcC9i0_2FF-WhtRIfIJ1lXl
 		<div id="todo-wrapper"></div>
 	}
 }
+035.React Dev Tools: {
+	- render: function() {
+		return (
+			<div>
+				<h1>Ninjaaaaaaaaaaaas</h1>
+				<p>Hellooooooooooo</p>
+			</div>
+		);
+	}
+	- Chrome web store: search for "react developer tools"
+		-> F12-React
+}
