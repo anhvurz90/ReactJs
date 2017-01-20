@@ -83,3 +83,33 @@ https://www.youtube.com/watch?v=yZ0f1Apb5CU&list=PL4cUxeGkcC9i0_2FF-WhtRIfIJ1lXl
 	}
 	- npm start
 }
+03.React Components: {
+	- Most of our React code comprises of components: {
+		+ Search bar component
+		+ Sign-up component
+		+ To-do list component {
+			* List item component
+			* Add new item (form) component
+		}
+	}
+	- index.js: {
+		var React = require("react");
+		var ReactDom = require("react-dom");
+		
+		//Create component
+		var TodoComponent = React.createClass({
+			render: function() {
+				return (
+					<h1>Helloooooooo</h1>
+				);
+			}
+		});
+		
+		//put component into html page
+		ReactDom.render(<TodoComponent/>, 
+			document.getElementById("todo-wrapper"));
+	}
+	- index.html: {
+		<div id="todo-wrapper"></div>
+	}
+}
