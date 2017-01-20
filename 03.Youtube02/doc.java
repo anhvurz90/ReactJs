@@ -125,3 +125,20 @@ https://www.youtube.com/watch?v=yZ0f1Apb5CU&list=PL4cUxeGkcC9i0_2FF-WhtRIfIJ1lXl
 	- Chrome web store: search for "react developer tools"
 		-> F12-React
 }
+04.Props: {
+	- index.js: {
+		render: function() {
+			return (
+				<div>
+					<p>{this.props.msg}</p>
+					<p><strong>Cheese name:</strong>{this.props.cheese.name}</p>
+					<p><strong>Cheese smell factor:</strong>{this.props.cheese.smellFactor}</p>
+					<p><strong>Cheese price:</strong>{this.props.cheese.price}</p>
+				</div>
+			);
+		};
+		
+		var myCheese = {name: "Camembert", smellFactor: "Extreme pong", price: "3.50"};
+		ReactDOM.render(<TodoComponent msg="I like cheese" cheese={myCheese}/>, document.get...);
+	}
+}
